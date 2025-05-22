@@ -1,10 +1,22 @@
+import BudgetForm from "./components/BudgetForm"
+
 function App() {
 
-  return (
-    <>
-      <h1 className="text-4xl">Expense Control</h1>
-    </>
-  )
+    return (
+        <>
+            <header className="bg-blue-600 py-8 max-h72">
+                <h1 className="uppercase text-center font-black text-4xl text-white">
+                    Expense Manager
+                </h1>
+            </header>
+
+            <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-lg mt-10 p-10">
+                <BudgetForm 
+                    
+                />
+            </div>
+        </>
+    )
 }
 
 export default App
