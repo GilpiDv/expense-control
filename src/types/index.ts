@@ -1,5 +1,5 @@
 export type Expense = {
-    id: number
+    id: string
     expenseName: string
     amount: number
     category: string
