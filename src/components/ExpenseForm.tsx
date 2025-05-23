@@ -9,12 +9,14 @@ import { useBudget } from "../hooks/useBudget";
 
 export default function ExpenseForm() {
 
-    const [expense, setExpense] = useState<DraftExpense>({
+    const initialExpense = {
         amount: 0,
         expenseName: '',
         category: '',
         date: new Date()
-    });
+    }
+
+    const [expense, setExpense] = useState<DraftExpense>(initialExpense);
 
     const [error, setError] = useState('');
 
@@ -47,6 +49,8 @@ export default function ExpenseForm() {
         }
 
         dispatch({type: 'add-expense', payload: {expense: expense}});
+
+        setExpense(initialExpense)
     }
 
     return (
@@ -94,6 +98,7 @@ export default function ExpenseForm() {
                     id="category" 
                     className="bg-slate-100 p-2"
                     onChange={handleChange}
+                    value={expense.category}
                 >   
                     <option value="">-- Select --</option>
                     {categories.map(category => (
