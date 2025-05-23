@@ -1,4 +1,4 @@
-import { useState, useSyncExternalStore, type ChangeEvent } from 'react'
+import { useState, type ChangeEvent } from 'react'
 
 export default function BudgetForm() {
 
