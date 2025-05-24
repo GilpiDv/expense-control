@@ -33,15 +33,15 @@ export default function BudgetTracker() {
                 </button>
 
                 <AmountDisplay 
-                    label='Presupuesto'
+                    label='Budget'
                     amount={state.budget}
                 />
                 <AmountDisplay 
-                    label='Disponible'
+                    label='Available'
                     amount={remainingBudget}
                 />
                 <AmountDisplay 
-                    label='Gastado'
+                    label='Expended'
                     amount={expendedBudget}
                 />
             </div>

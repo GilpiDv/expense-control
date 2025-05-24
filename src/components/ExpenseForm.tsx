@@ -76,7 +76,7 @@ export default function ExpenseForm() {
     return (
         <form className="space-y-5" onSubmit={handleSubmit}>
             <legend className="uppercase text-center text-2xl font-black border-b-4 border-blue-500 py-2">
-                {state.editingId ? 'Edit Expense' : 'New Expense'}
+                Expense
             </legend>
 
             {error && <ErrorMessage>{error}</ErrorMessage>}
