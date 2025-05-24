@@ -11,16 +11,26 @@ export type BudgetActions =
 { type: 'update-expense', payload: {expense: Expense} } 
 
 export type BudgetState = {
-    budget: number
+    budget: number;
     modal: boolean
     expenses: Expense[]
     editingId: Expense['id']
 }
 
+const initialBudget = () : number => {
+    const localStorageBudget = localStorage.getItem('budget');
+    return localStorageBudget ? +localStorageBudget : 0;
+}
+
+const initialExpenses = () : Expense[] => {
+    const localStorageExpenses = localStorage.getItem('expenses');
+    return localStorageExpenses ? JSON.parse(localStorageExpenses) : []
+}
+
 export const initialState = {
-    budget: 0,
+    budget: initialBudget(),
     modal: false,
-    expenses: [],
+    expenses: initialExpenses(),
     editingId: ''
 }
 
