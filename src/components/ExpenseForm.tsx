@@ -51,7 +51,7 @@ export default function ExpenseForm() {
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         setError('');
         e.preventDefault();
-        console.log("expense", expense);
+
         if(Object.values(expense).includes('') || Object.values(expense).includes(null)) {
             setError('All fields are required!');
             return;

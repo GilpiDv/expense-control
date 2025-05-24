@@ -24,7 +24,7 @@ export const BudgetProvider = ({children} : BudgetProviderProps) => {
 
     const remainingBudget =  useMemo(() => {
         return state.budget - expendedBudget;
-    }, [state.expenses])
+    }, [state.expenses, state.budget])
 
     return (
         <BudgetContext.Provider
