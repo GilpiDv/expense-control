@@ -45,12 +45,15 @@ export default function ExpenseDetail({expense} : ExpenseDetailProps) {
                 leadingActions={leadingActions()}
                 trailingActions={trailingActions()}
             >
-                <div className="bg-white shadow-lg p-10 w-full border-b border-gray-200 flex gap-5 items-center">
-                    <div>
+                <div className="bg-white shadow-lg p-10 w-full border-b border-gray-400 flex gap-5 items-center">
+                    <div className="hidden sm:block">
                         <img src={`/icono_${categoryInfo.icon}.svg`} alt="Expense Icon" className="w-20" />
                     </div>
                     <div className="flex-1 space-y-2">
-                        <p className="text-lg font-bold uppercase text-slate-500">{categoryInfo.name}</p>
+                        <div className="flex gap-2 sm:hidden" >
+                            <img src={`/icono_${categoryInfo.icon}.svg`} alt="Expense Icon" className="w-5" />
+                            <p className="text-lg font-bold uppercase text-slate-400">{categoryInfo.name}</p>
+                        </div>
                         <p className="text-xl">{expense.expenseName}</p>
                         <p className="text-slate-600 text-sm">{formatDate(expense.date!.toString())}</p>
                     </div>

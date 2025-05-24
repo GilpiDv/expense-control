@@ -15,7 +15,7 @@ export default function ExpenseModal() {
                     type="button"
                     onClick={() => dispatch({type: 'show-modal'})}
                 >
-                    <PlusCircleIcon className='w-16 h-16 text-blue-600 rounded-full' />
+                    <PlusCircleIcon className='w-16 h-16 text-blue-600 rounded-full bg-white' />
                 </button>
             </div>
 
@@ -25,12 +25,12 @@ export default function ExpenseModal() {
                         as={Fragment}
                         enter="ease-out duration-300"
                         enterFrom="opacity-0"
-                        enterTo="opacity-100"
+                        enterTo="opacity-75"
                         leave="ease-in duration-300"
-                        leaveFrom="opacity-100"
+                        leaveFrom="opacity-75"
                         leaveTo="opacity-0"
                     >
-                        <div className="fixed inset-0 opacity-100 bg-amber-400" />
+                        <div className="fixed inset-0 opacity-75 bg-black" />
                     </TransitionChild>
 
                     <div className="fixed inset-0 overflow-y-auto">
@@ -40,8 +40,8 @@ export default function ExpenseModal() {
                                 enter="ease-out duration-300"
                                 enterFrom="opacity-0 scale-95"
                                 enterTo="opacity-100 scale-100"
-                                leave="ease-in duration-200"
-                                leaveFrom="opacity-100 scale-100"
+                                leave="ease-in duration-300"
+                                leaveFrom="opacity-75 scale-100"
                                 leaveTo="opacity-0 scale-95"
                             >
                                 <DialogPanel className="w-full max-w-3xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
