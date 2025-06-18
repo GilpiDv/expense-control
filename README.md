@@ -1,54 +1,74 @@
-# React + TypeScript + Vite
+# Expense Control
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and intuitive expense management application built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Define and track your budget
+- Add, update, and delete expenses
+- Filter expenses by category
+- Visualize budget usage with a circular progress bar
+- Responsive and modern UI
+- Persistent data using localStorage
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+.
+├── public/
+│   └── [icons and images]
+├── src/
+│   ├── components/         # Reusable React components
+│   ├── context/            # React context for global state
+│   ├── data/               # Static data (categories)
+│   ├── helpers/            # Utility functions
+│   ├── hooks/              # Custom React hooks
+│   ├── reducers/           # State reducers
+│   ├── types/              # TypeScript types
+│   ├── App.tsx             # Main app component
+│   ├── main.tsx            # Entry point
+│   └── index.css           # Global styles
+├── index.html
+├── package.json
+├── vite.config.ts
+└── tsconfig*.json
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Installation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/expense-control.git
+   cd expense-control
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the development server:
+   ```sh
+   npm run dev
+   ```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Technologies Used
+
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React Circular Progressbar](https://www.npmjs.com/package/react-circular-progressbar)
+- [React Date Picker](https://www.npmjs.com/package/react-date-picker)
+- [React Swipeable List](https://www.npmjs.com/package/react-swipeable-list)
+- [uuid](https://www.npmjs.com/package/uuid)
+
+## How to Use
+
+1. Define your initial budget.
+2. Add expenses by clicking the "+" button and filling out the form.
+3. Filter expenses by category using the dropdown.
+4. Update or delete expenses by swiping left or right on an expense item.
+5. Track your available and expended budget visually.
+
+## Live Demo
+
+[https://sprightly-granita-f06415.netlify.app/](https://sprightly-granita-f06415.netlify.app/)
